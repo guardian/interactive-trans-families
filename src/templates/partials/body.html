@@ -3,14 +3,14 @@
         {{#each @this}}
             <div class='uit-story'>
                 <div class='uit-story__photo uit-story__photo--portrait'>
-                    <img class='uit-story__image' src='{{ portraitImage }}' />
+                    <img class='uit-story__image' src='{{ gridToLink portraitImage }}' />
                     <p class='uit-story__caption'>{{ portraitCaption }}</p>
                 </div>
 
                 <div class='uit-story__main'>
                     <h3 class='uit-story__intro'>{{{ marked intro }}}</h3>
                     <div class='uit-story__photo uit-story__photo--landscape'>
-                        <img class='uit-story__image' src='{{ landscapeImage }}' />
+                        <img class='uit-story__image' src='{{ gridToLink landscapeImage }}' />
                         <p class='uit-story__caption'>{{ landscapeCaption }}</p>
                     </div>
                     <div class='uit-story__body'>
