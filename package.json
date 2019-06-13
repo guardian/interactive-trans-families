@@ -14,7 +14,7 @@
     },
     "config": {
         "data": {
-            "id": ""
+            "id": "1GXEbVeweKcskFq_3pJaTJs3nzOwbrxwqGpCZqlbhyow"
         },
         "local": {
             "url": "http://localhost",
@@ -22,7 +22,7 @@
         },
         "remote": {
             "url": "https://interactive.guim.co.uk",
-            "path": "atoms/2018/01/us-interactive-template",
+            "path": "atoms/2019/06/trans-families",
             "bucket": "gdn-cdn"
         },
         "template": "immersive"
