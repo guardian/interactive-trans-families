@@ -82,7 +82,9 @@ module.exports = {
         });
 
         handlebars.registerHelper('marked', function(string) {
-            return markdown.toHTML(string);
+            if (string) {
+                return markdown.toHTML(string);
+            }
         });
 
         var adId = 0;
@@ -146,27 +148,27 @@ module.exports = {
         });
 
         handlebars.registerHelper('gridToLink', function(url) {
-            var crop = url.split('?crop=')[1];
-            var cropDimensions = crop.split('_');
+            if (url) {
+                var crop = url.split('?crop=')[1];
+                var cropDimensions = crop.split('_');
 
-            var cropWidth = cropDimensions[2] - cropDimensions[0];
-            var cropHeight = cropDimensions[3] - cropDimensions[1];
+                var cropWidth = cropDimensions[2] - cropDimensions[0];
+                var cropHeight = cropDimensions[3] - cropDimensions[1];
 
-            if (cropHeight > cropWidth) {
-                var ratio = 1000 / cropHeight;
-                size = Math.round(cropWidth * ratio);
-            } else {
-                size = 1000;
+                if (cropHeight > cropWidth) {
+                    var ratio = 1000 / cropHeight;
+                    size = Math.round(cropWidth * ratio);
+                } else {
+                    size = 1000;
+                }
+
+                url = url.replace('gutools.co.uk', 'guim.co.uk');
+                url = url.replace('http://', 'https://');
+                url = url.replace('images/', '');
+                url = url.split('?')[0];
+
+                return url + '/' + crop + '/' + size + '.jpg';
             }
-
-
-            console.log(size);
-            url = url.replace('gutools.co.uk', 'guim.co.uk');
-            url = url.replace('http://', 'https://');
-            url = url.replace('images/', '');
-            url = url.split('?')[0];
-
-            return url + '/' + crop + '/' + size + '.jpg';
         });
 
         var html = fs.readFileSync('src/templates/main.html', 'utf8');

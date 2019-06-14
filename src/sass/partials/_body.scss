@@ -1,3 +1,18 @@
+.uit-story {
+    @include mq(desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+}
+
+.uit-story__main {
+    @include mq(desktop) {
+        max-width: calc(50% - 10px);
+    }
+}
+
 .uit-story__intro p {
     font-family: 'Guardian Egyptian Web';
     font-size: 24px;
@@ -7,11 +22,17 @@
 
     @include mq(desktop) {
         font-size: 36px;
+        padding-bottom: 140px;
+        margin-top: -8px;
     }
 }
 
 .uit-story__body {
     max-width: 620px;
+
+    @include mq(desktop) {
+        padding-top: 12px;
+    }
 
     p {
         font-family: 'Guardian Text Egyptian Web';
@@ -22,6 +43,16 @@
     }
 }
 
+.uit-story__photo--portrait {
+    @include mq(desktop) {
+        max-width: calc(50% - 10px);
+    }
+}
+
+.uit-story__image {
+    max-width: 100%;
+}
+
 .uit-story__caption {
     position: relative;
     font-family: 'Guardian Sans Web';
@@ -30,6 +61,7 @@
     color: $c-black;
     text-indent: 1.1em;
     margin-top: 4px;
+    max-width: 460px;
 
     &:before {
         content: '';
