@@ -1,15 +1,8 @@
 .uit-story {
     @include mq(desktop) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding-bottom: 100px;
-    }
-}
-
-.uit-story__main {
-    @include mq(desktop) {
+        position: relative;
         max-width: calc(50% - 10px);
+        padding-bottom: 100px;
     }
 }
 
@@ -45,7 +38,10 @@
 
 .uit-story__photo--portrait {
     @include mq(desktop) {
-        max-width: calc(50% - 10px);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: calc(-100% - 20px);
     }
 }
 
