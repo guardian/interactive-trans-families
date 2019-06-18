@@ -22,6 +22,7 @@
 
 .uit-story__body {
     max-width: 620px;
+    padding-top: 18px;
 
     @include mq(desktop) {
         padding-top: 12px;
@@ -70,7 +71,6 @@
         align-items: flex-end;
         flex-direction: row-reverse;
         margin-top: -10%;
-        margin-bottom: 18px;
 
         .uit-story__caption {
             margin-top: calc(10% + 6px);
@@ -113,5 +113,16 @@
         border-left: transparent .4em solid;
         border-right: transparent .4em solid;
         border-bottom: $c-light-blue 0.8em solid;
+    }
+}
+
+.uit-story--flipped {
+    @include mq(desktop) {
+        margin-left: calc(50% - 10px);
+
+        .uit-story__photo--portrait {
+            right: auto;
+            left: calc(-100% - 20px);
+        }
     }
 }

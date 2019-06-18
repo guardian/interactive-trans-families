@@ -37,6 +37,22 @@ function sortResults() {
     return data;
 }
 
+function determineLayouts() {
+    var alt = false;
+
+    data.forEach(function(d, i) {
+        if (!d.landscapeImage) {
+            d.photoCount = 'single';
+        } else {
+            d.photoCount = 'single';
+        }
+
+        d.layout = i % 2 ? 'normal' : 'flipped';
+    });
+
+    return data;
+}
+
 function appendConfigDrivenData(config) {
     data.path = config.absolutePath
     data.isLocal = !config.specs.deploy;
@@ -53,6 +69,7 @@ module.exports = function getData(config) {
         fetchData(config.data.id, function(result) {
             data = result;
             data = sortResults();
+            data = determineLayouts();
             // call additional data cleaning functions here
 
             isDone = true;
