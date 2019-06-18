@@ -2,7 +2,7 @@
     <div class='uit-container'>
         <div class='uit-header__images'>
             {{#each @this}}
-                <img class='uit-header__image' src='{{ gridToLink portraitImage }}' />
+                <img class='uit-header__image uit-header__image--{{ @key }}' src='{{ gridToLink portraitImage }}' />
             {{/each}}
         </div>
         <div class='uit-content'>
