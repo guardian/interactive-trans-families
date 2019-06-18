@@ -44,7 +44,15 @@ function determineLayouts() {
         if (!d.landscapeImage) {
             d.photoCount = 'single';
         } else {
-            d.photoCount = 'single';
+            d.photoCount = 'double';
+
+            if (alt) {
+                d.mobileLayout = 'flipped';
+                alt = false;
+            } else {
+                d.mobileLayout = 'normal';
+                alt = true;
+            }
         }
 
         d.layout = i % 2 ? 'normal' : 'flipped';
