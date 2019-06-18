@@ -61,7 +61,7 @@
     line-height: 1.3;
     color: $c-black;
     text-indent: 1.1em;
-    margin-top: 4px;
+    margin-top: 6px;
     max-width: 460px;
 
     &:before {
@@ -124,7 +124,7 @@
             .uit-story__caption {
                 margin-top: calc(10% + 6px);
                 margin-right: 10px;
-                margin-bottom: 0;
+                margin-bottom: -4px;
 
                 &:before {
                     border-top: transparent .4em solid;
@@ -163,7 +163,7 @@
             .uit-story__caption {
                 margin-top: calc(10% + 6px);
                 margin-left: 10px;
-                margin-bottom: 0;
+                margin-bottom: -4px;
 
                 &:before {
                     border-top: transparent .4em solid;
