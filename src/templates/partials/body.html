@@ -16,7 +16,20 @@
                     </div>
                 {{/if}}
                 <div class='uit-story__body'>
-                    {{{ marked body }}}
+                    {{#if spanishBody}}
+                        <div class='uit-story__switch'>
+                            <span class='uit-story__switch--spanish'>Léalo en español</span>
+                            <span class='uit-story__switch--english'>Read in English</span>
+                        </div>
+                        <div class='uit-story__body-english'>
+                            {{{ marked body }}}
+                        </div>
+                        <div class='uit-story__body-spanish'>
+                            {{{ marked spanishBody }}}
+                        </div>
+                    {{else}}
+                        {{{ marked body }}}
+                    {{/if}}
                 </div>
             </div>
         {{/each}}
