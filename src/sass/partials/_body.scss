@@ -112,7 +112,7 @@
 
 .uit-story--flipped {
     @include mq(desktop) {
-        margin-left: calc(50% - 10px);
+        margin-left: calc(50% + 10px);
 
         .uit-story__photo--portrait {
             right: auto;
