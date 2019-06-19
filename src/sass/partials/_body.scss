@@ -1,8 +1,10 @@
 .uit-story {
+    padding-bottom: 48px;
+
     @include mq(desktop) {
         position: relative;
         max-width: calc(50% - 10px);
-        padding-bottom: 100px;
+        padding-bottom: 120px;
     }
 }
 
