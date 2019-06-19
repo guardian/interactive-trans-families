@@ -13,6 +13,7 @@
 
         @include mq(desktop) {
             padding: 30% 0;
+            margin-bottom: 120px;
         }
 
         @include mq(leftCol) {
