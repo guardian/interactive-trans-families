@@ -128,7 +128,7 @@
 
     &:hover {
         .uit-header__actual-image {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .uit-header__image-label {
@@ -137,7 +137,7 @@
     }
 }
 
-.uit-header__image--0 {
+.uit-header__image--1 {
     left: 5%;
     top: 6%;
     animation-delay: 0.3s;
@@ -149,7 +149,7 @@
     }
 }
 
-.uit-header__image--1 {
+.uit-header__image--2 {
     top: -3%;
     left: 35%;
     animation-delay: 1.3s;
@@ -159,7 +159,7 @@
     }
 }
 
-.uit-header__image--2 {
+.uit-header__image--3 {
     right: 2%;
     top: 3%;
     animation-delay: 1s;
@@ -170,7 +170,7 @@
     }
 }
 
-.uit-header__image--3 {
+.uit-header__image--4 {
     bottom: 15%;
     left: -2%;
     animation-delay: 0.6s;
@@ -181,7 +181,7 @@
     }
 }
 
-.uit-header__image--4 {
+.uit-header__image--5 {
     bottom: 2%;
     left: 40%;
     animation-delay: 0.4s;
@@ -192,7 +192,7 @@
     }
 }
 
-.uit-header__image--5 {
+.uit-header__image--0 {
     bottom: 10%;
     right: 5%;
     animation-delay: 1.8s;
@@ -226,22 +226,22 @@
     transition: opacity 0.4s linear;
 }
 
-.uit-header__image--2,
 .uit-header__image--3,
-.uit-header__image--5 {
+.uit-header__image--4,
+.uit-header__image--0 {
     .uit-header__image-label {
         left: -50%;
     }
 }
 
-.uit-header__image--1,
-.uit-header__image--2 {
+.uit-header__image--2,
+.uit-header__image--3 {
     .uit-header__image-label {
         color: $c-pink;
     }
 }
 
-.uit-header__image--1 {
+.uit-header__image--2 {
     .uit-header__image-label {
         top: auto;
         bottom: 10%;
@@ -249,13 +249,13 @@
 }
 
 
-.uit-header__image--3 {
+.uit-header__image--4 {
     .uit-header__image-label {
         top: -2%;
     }
 }
 
-.uit-header__image--4 {
+.uit-header__image--5 {
     .uit-header__image-label {
         top: auto;
         bottom: 40%;
@@ -264,14 +264,14 @@
     }
 }
 
-.uit-header__image--0,
-.uit-header__image--5 {
+.uit-header__image--1,
+.uit-header__image--0 {
     .uit-header__image-label {
         top: 5%;
     }
 }
 
-.uit-header__image--5 {
+.uit-header__image--0 {
     .uit-header__image-label {
         top: 5%;
         left: auto;
