@@ -1,6 +1,10 @@
 .uit-story {
     padding-bottom: 48px;
 
+    @include mq(tablet) {
+        padding-top: 12px;
+    }
+
     @include mq(desktop) {
         position: relative;
         max-width: calc(50% - 10px);
@@ -10,7 +14,6 @@
 
 .uit-story__intro {
     @include mq(tablet) {
-        margin-top: -18px;
         display: table;
     }
 }
@@ -25,7 +28,6 @@
     @include mq(desktop) {
         font-size: 36px;
         padding-bottom: 140px;
-        margin-top: -8px;
     }
 }
 
@@ -78,7 +80,7 @@
     @include mq(desktop) {
         width: 100%;
         position: absolute;
-        top: 0;
+        top: 18px;
         right: calc(-100% - 20px);
     }
 }
