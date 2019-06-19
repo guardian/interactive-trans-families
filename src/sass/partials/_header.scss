@@ -113,13 +113,25 @@
 
 .uit-header__image {
     width: 25%;
+    background-color: $c-pink;
     position: absolute;
+    z-index: 10;
     animation: scaleIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     transform: scale(0.7);
     opacity: 0;
 
     @include mq(desktop) {
         width: 20%;
+    }
+
+    &:hover {
+        .uit-header__actual-image {
+            transform: scale(1.1);
+        }
+
+        .uit-header__image-label {
+            opacity: 1;
+        }
     }
 }
 
@@ -186,5 +198,81 @@
     @include mq(desktop) {
         right: 0;
         bottom: 12%;
+    }
+}
+
+.uit-header__actual-image {
+    width: 100%;
+    transition: transform 0.4s linear;
+}
+
+.uit-header__image-label {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: $c-black;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+}
+
+.uit-header__image--2,
+.uit-header__image--3,
+.uit-header__image--5 {
+    .uit-header__image-label {
+        left: -50%;
+    }
+}
+
+.uit-header__image--1,
+.uit-header__image--2 {
+    .uit-header__image-label {
+        color: $c-pink;
+    }
+}
+
+.uit-header__image--1 {
+    .uit-header__image-label {
+        top: auto;
+        bottom: 10%;
+    }
+}
+
+
+.uit-header__image--3 {
+    .uit-header__image-label {
+        top: -2%;
+    }
+}
+
+.uit-header__image--4 {
+    .uit-header__image-label {
+        top: auto;
+        bottom: 40%;
+        left: auto;
+        right: 120%;
+    }
+}
+
+.uit-header__image--0,
+.uit-header__image--5 {
+    .uit-header__image-label {
+        top: 5%;
+    }
+}
+
+.uit-header__image--5 {
+    .uit-header__image-label {
+        top: 5%;
+        left: auto;
+        right: 80%;
     }
 }

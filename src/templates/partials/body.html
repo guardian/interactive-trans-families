@@ -1,7 +1,7 @@
 <div class='uit-body'>
     <div class='uit-container'>
         {{#each @this}}
-            <div class='uit-story uit-story--{{ layout }} uit-story--mobile-{{ mobileLayout }} uit-story--{{ photoCount }}'>
+            <div id='{{ handlise name }}' class='uit-story uit-story--{{ layout }} uit-story--mobile-{{ mobileLayout }} uit-story--{{ photoCount }}'>
                 <h3 class='uit-story__intro'>{{{ marked intro }}}</h3>
                 {{#if portraitImage }}
                     <div class='uit-story__photo uit-story__photo--portrait'>
